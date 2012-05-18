@@ -1,13 +1,47 @@
-18.05.2012
-
 # **************************************************************************
+# DESCRIPTION:
 # Scripts developed under IRENE project.
-# Author: Martin Hediger, Copenhagen University
-# Usage documented in tutorial file.
+
+# AUTHOR:
+# Martin Hediger, Copenhagen University
+# 
+# USAGE:
+# Documented in tutorial_screening.pdf
+#
+# NOTE:
+# The scripts belong to one of the two categories:
+# - Data production is related to all steps required for setting up
+#   and carrying out calculations using the MOPAC program.
+# - Data processing is concerned with the steps to analyse the data
+#   produced.
+# The scripts are described roughly in order of usage. Caution is required
+# in the usage of the scripts because they
+# a) Could potentially overwrite CPU costly output
+# b) In some cases require adjustment of keywords which are required
+#    for parsing input.
 # ..........................................................................
 
 # **************************************************************************
-# Scripts:
-- 'avf.py'    : A-ssemble V-ariant F-iles.
-- 'cha2scf.sh': Charge to scf calculation transfer.
+# Scripts Data Production
+- 'seq_files.py'    : Generate back bone sequence files.
+- 'vsc.py'          : V-ariant s-ide c-hain file generation from PyMOL. Point
+                      mutations are entered in this script.
+- 'avf.py'          : A-ssemble V-ariant F-iles.
+- 'cha2scf.sh'      : Charge to scf calculation transfer.
+- 'fix.py'          : Script to constrain side chains.
+- 'intcat.sh'       : Interpolate between two structures, concatenate frames.
+- 'intcha.sh'       : Interpolate between two structures and write keyword for
+                      MOPAC charge determination.  
+- 'scf2opt.sh'      : Write MOPAC input for optimization based on SCF output.
+- 'opt2spe.sh'      : Transfer structure data from optimization to MOPAC
+                      SPE input file.
+
+# Scripts Data Processing
+- 'profiles.py'     : Extract heat of formation from MOPAC output files
+                      and write a file for each unique mutant.
+- 'ext_rest_barrier': Extract barriers.
+- 'plots.py'        : Write gnuplot files for plotting blocks
+                      related of mutants.
+- 'vec.py'          : Script used in order to analyze partial Hessian
+                      vibrational analysis.
 # ..........................................................................
