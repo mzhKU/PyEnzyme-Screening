@@ -1,0 +1,13 @@
+18.05.2012
+
+# **************************************************************************
+# Scripts developed under IRENE project.
+# Author: Martin Hediger, Copenhagen University
+# Usage documented in tutorial file.
+# ..........................................................................
+
+# **************************************************************************
+# Scripts:
+- 'avf.py'    : A-ssemble V-ariant F-iles.
+- 'cha2scf.sh': Charge to scf calculation transfer.
+# ..........................................................................
