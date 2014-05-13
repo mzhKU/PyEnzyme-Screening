@@ -10,10 +10,14 @@ from pymol.exporting import _resn_to_aa as one_letter
 
 # *****************************************************************
 # CALLING SEQUENCE:
+# PyMOL> set retain_order, 0
+# PyMOL> load <object.pdb>
 # PyMOL> run seq.py
-# PyMOL> seq
-# -----------------------------------------------------------------
+# PyMOL> seq <state>
 
+# PREPARATION:
+# - No residues with resn 'UNK', substrate resn 'LIG'
+# -----------------------------------------------------------------
 
 # *****************************************************************
 def seq(state, selection="name ca or resn hoh or resn lig"):

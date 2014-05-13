@@ -53,7 +53,7 @@ def get_energy(name):
 def write_dat(name, counter):
     gnu_dat = open('%04i-' % counter + name + '.dat' , 'w')
     energy = get_energy(name)
-    e0 = energy[0]
+    e0 = energy[-1]
     for e in energy:
         gnu_dat.write(str(eval(e)-eval(e0)) + '\n') 
     gnu_dat.close() 
@@ -62,8 +62,9 @@ def write_gnu(name, counter):
     gnus  = 'set terminal postscript eps \"Helvetica\" 24\n'
     gnus += 'set output \'%04i-%s.eps\'\n' % (counter, name)
     gnus += 'set key left top\n'
+    gnus += 'set size 0.6, 0.6\n'
     gnus += 'set xrange[0:11]\n'
-    gnus += 'set yrange[-20:20]\n'
+    #gnus += 'set yrange[-20:20]\n'
     e0 = get_energy(name)[0]
     x_min, x_max = get_x_range(name, counter)
     #gnus += 'set xrange[%s:%s]\n' % (str(x_min),str(x_max))

@@ -23,18 +23,31 @@
 
 # **************************************************************************
 # Scripts Data Production
-- 'seq_files.py'    : Generate back bone sequence files.
-- 'vsc.py'          : V-ariant s-ide c-hain file generation from PyMOL. Point
-                      mutations are entered in this script.
-- 'avf.py'          : A-ssemble V-ariant F-iles.
-- 'cha2scf.sh'      : Charge to scf calculation transfer.
-- 'fix.py'          : Script to constrain side chains.
-- 'intcat.sh'       : Interpolate between two structures, concatenate frames.
-- 'intcha.sh'       : Interpolate between two structures and write keyword for
-                      MOPAC charge determination.  
-- 'scf2opt.sh'      : Write MOPAC input for optimization based on SCF output.
-- 'opt2spe.sh'      : Transfer structure data from optimization to MOPAC
-                      SPE input file.
+- 'seq_files.py'          : Generate back bone sequence files.
+- 'vsc.py'                : V-ariant s-ide c-hain file generation from PyMOL. Point
+                            mutations are entered in this script.
+- 'vsc-bcx.py'            : VSC modified to generate all side chains at selected positions.
+- 'vsc-ext.py'            : VSC extended, get all positions within selection,
+                            generate all or defined mutants at these positions.
+- 'vsc-set.py'            : VSC used to prepare mutant sets (mutations depending on
+                            current 'resn')
+- 'avf.py'                : A-ssemble V-ariant F-iles.
+- 'cha2scf.sh'            : Charge to scf calculation transfer.
+- 'fix.py'                : Script to constrain side chains.
+- 'intcat.sh'             : Interpolate between two structures, concatenate frames.
+- 'intcha.sh'             : Interpolate between two structures and write keyword for
+                            MOPAC charge determination.  
+- 'scf2opt.sh'            : Write MOPAC input for optimization based on SCF output.
+- 'opt2spe.sh'            : Transfer structure data from optimization to MOPAC
+                            SPE input file.
+- 'cat_arc2pdb.py'        : Writes PDB file with interpolation frames from MOPAC output
+                            for viewing in PyMOL (see also 'del_PDB_header.sh')
+- 'int_arc2mop.py'        : Writes MOPAC interpolation input
+- 'del_MOPAC_header.sh'   : Removes MOPAC header in '.arc' files
+- 'del_PDB_header.sh'     : Removes 'HEADER', 'TER' and 'END' records in PDB files
+                            (required prior to using 'cat_arc2pdb.py')
+- 'fix_reacting_atoms.py' : Set optimization flags for two atoms to '+0'
+- 'check-charge-double.py': Compare predicted and computed charge for double mutants
 
 # Scripts Data Processing
 - 'profiles.py'     : Extract heat of formation from MOPAC output files

@@ -15,7 +15,9 @@
 # PARAMETERS:
 # Choose the side chains in the list below:
 residues_to_fix = [
-        '38'
+        '24',
+        '25'
+        #'38'
         # '50',
         #'133',
         #'156',
